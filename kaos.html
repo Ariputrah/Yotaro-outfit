@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yotaro Outfit — Kaos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: linear-gradient(135deg, #0f172a 0%, #06202a 50%, #052b2b 100%);
+      --accent: #0ea5a3;
+    }
+
+    html,
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #06202a 50%, #052b2b 100%);
+      color: #0b1220;
+    }
+
+    .navbar {
+      padding: 0.6rem 1rem;
+    }
+
+    .brand {
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #0ea5a3;
+    }
+
+    .search-input {
+      max-width: 240px;
+    }
+
+    .nav-link {
+      transition: 0.18s ease;
+    }
+
+    .nav-link:hover {
+      opacity: 0.8;
+    }
+
+    .hero {
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .product-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      background: var(--card-bg);
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(12, 20, 30, 0.12);
+    }
+
+    .product-img {
+      height: 320px;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+    }
+
+    .caption {
+      padding: 0.75rem 0.9rem;
+    }
+
+    .modal-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+    }
+
+    body[data-theme='dark'] {
+      background: linear-gradient(180deg, #071013, #041317);
+      color: #e6eef0;
+    }
+
+    body[data-theme='dark'] .product-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    body[data-theme='dark'] .brand {
+      color: #8af0e8;
+    }
+
+    body[data-theme='dark'] .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    body[data-theme='dark'] .dropdown-menu {
+      background: #06131a;
+      border-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .visually-hidden-focusable:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .product-img {
+        height: 220px;
+      }
+    }
+
+    .hero h1 {
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm navbar-dark" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" href="#">YOTARO</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+          aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <form class="d-flex me-3" role="search">
+            <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search"
+              style="max-width: 150px" />
+          </form>
+
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="produkDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+              <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="produkDropdown">
+                <li><a class="dropdown-item" href="hoodie.html">Hoodie</a></li>
+                <li><a class="dropdown-item" href="sweater.html">Sweater</a></li>
+                <li><a class="dropdown-item" href="kaos.html">T-Shirt</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link text-white" href="member.html">Member</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="aboutus.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container text-white">
+      <h1>T-Shirt</h1>
+      <p class="text-white mb-0">Yotaro dengan kaos kualitas terbaik.</p>
+      <p>— klik gambar untuk memperbesar.</p>
+    </section>
+
+    <section class="container pb-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card card h-100" aria-labelledby="p1title">
+            <button class="btn p-0 border-0 text-start" style="background: transparent" data-bs-toggle="modal"
+              data-bs-target="#lightboxModal" data-img="kaos1-removebg-preview.png"
+              aria-label="Perbesar Yotaro Fireborn">
+              <img src="kaos1-removebg-preview.png" loading="lazy" decoding="async" class="product-img"
+                alt="Yotaro Fireborn" />
+            </button>
+            <div class="caption">
+              <h5 id="p1title" class="text-white mb-1">Yotaro Zero</h5>
+              <p class="text-white small mb-2">IDR 75.000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-white">Last updated 2 days ago</small>
+                <div>
+                  <button class="btn btn-sm btn-outline-primary me-1" aria-label="Tambahkan ke wishlist"><i
+                      class="bi bi-heart"></i></button>
+                  <button class="btn btn-sm btn-primary" aria-label="Beli Yotaro Fireborn">Beli</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card card h-100" aria-labelledby="p2title">
+            <button class="btn p-0 border-0 text-start" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+              data-img="kaos2-removebg-preview.png" aria-label="Perbesar Yotaro Iceburst">
+              <img src="kaos2-removebg-preview.png" loading="lazy" decoding="async" class="product-img"
+                alt="Yotaro Iceburst" />
+            </button>
+            <div class="caption">
+              <h5 id="p2title" class="text-white mb-1">Yotaro Kicks</h5>
+              <p class="text-white small mb-2">IDR 80.000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-white">Last updated 5 days ago</small>
+                <div>
+                  <button class="btn btn-sm btn-outline-primary me-1" aria-label="Tambahkan ke wishlist"><i
+                      class="bi bi-heart"></i></button>
+                  <button class="btn btn-sm btn-primary" aria-label="Beli Yotaro Iceburst">Beli</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card card h-100" aria-labelledby="p3title">
+            <button class="btn p-0 border-0 text-start" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+              data-img="kaos3-removebg-preview.png" aria-label="Perbesar Yotaro Mudclub">
+              <img src="kaos3-removebg-preview.png" loading="lazy" decoding="async" class="product-img"
+                alt="Yotaro Mudclub" />
+            </button>
+            <div class="caption">
+              <h5 id="p3title" class="text-white mb-1">Yotaro Classic</h5>
+              <p class="text-white small mb-2">IDR 70.000.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-white">Last updated 1 weeks ago</small>
+                <div>
+                  <button class="btn btn-sm btn-outline-primary me-1" aria-label="Tambahkan ke wishlist"><i
+                      class="bi bi-heart"></i></button>
+                  <button class="btn btn-sm btn-primary" aria-label="Beli Yotaro Mudclub">Beli</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <button type="button" class="btn-close btn-close-white position-absolute end-3 top-3" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <img id="lightboxImage" src="" alt="" class="modal-img rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <small>&copy; 2025 Yotaro Outfit. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('[data-bs-target="#lightboxModal"]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const img = e.currentTarget.dataset.img || e.currentTarget.querySelector('img')?.src;
+        const big = document.getElementById('lightboxImage');
+        big.src = img;
+        big.alt = e.currentTarget.querySelector('img')?.alt || 'Produkt image';
+      });
+    });
+
+    const themeBtn = document.getElementById('toggleTheme');
+    const body = document.body;
+    const saved = localStorage.getItem('yotaro_theme');
+    if (saved === 'dark') body.setAttribute('data-theme', 'dark');
+
+    function updateThemeButton() {
+      const dark = body.getAttribute('data-theme') === 'dark';
+      themeBtn.innerHTML = dark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+      themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    }
+    updateThemeButton();
+
+    themeBtn.addEventListener('click', () => {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('yotaro_theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('yotaro_theme', 'dark');
+      }
+      updateThemeButton();
+    });
+
+    const lightboxModalEl = document.getElementById('lightboxModal');
+    lightboxModalEl.addEventListener('shown.bs.modal', () => {
+      document.querySelector('#lightboxModal .btn-close').focus();
+    });
+
+    if (!('loading' in HTMLImageElement.prototype)) {
+      const imgs = document.querySelectorAll('img[loading="lazy"]');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.datasetSrc || img.src;
+                observer.unobserve(img);
+              }
+            });
+          },
+          { rootMargin: '100px' }
+        );
+        imgs.forEach((img) => io.observe(img));
+      }
+    }
+  </script>
+</body>
+
+</html>
